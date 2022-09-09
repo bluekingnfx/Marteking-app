@@ -29,7 +29,6 @@ import {
     GrandTotalInReceiptParent,
     GrandTotalInReceipt,
     TotalItemDisplayDiv,
-    MsgDiv,
     DiscountDisplayDiv,
     SubtractionDiv,
     GrandTotalVisualizer,
@@ -62,7 +61,8 @@ export const ReceiptMainComp = () => {
     if(QuantityAr.length > 0){
         const ProPData = Checking(QuantityAr,DiscountAmount,GrandTotalFromTable,DAFreeGT)
         data = ProPData.data
-        msg = ProPData.Msg
+        // eslint-disable-next-line no-unused-vars 
+        msg = ProPData.Msg /*//!This line is given to notice the user that quantity cant be decimal but the feature is not added. */
     }else{
         data = []
     }
